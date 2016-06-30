@@ -4,6 +4,13 @@ import $!{packageName}.bean.pagination.PageEntity;
 import $!{packageName}.dto.BaseDto;
 import $!{packageName}.entity.${domainName};
 
+/**
+ * 开发者
+ * nickName:大黄蜂
+ * email:245655812@qq.com
+ * github:https://github.com/bigbeef
+ * velocity模板生成 cppba-codeTemplate
+ */
 public interface $!{domainName}Service {
 	void save($!{domainName} $!{domain});
 

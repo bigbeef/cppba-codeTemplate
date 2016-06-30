@@ -13,6 +13,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * 开发者
+ * nickName:大黄蜂
+ * email:245655812@qq.com
+ * github:https://github.com/bigbeef
+ */
+
 public class Main {
 
     static String domainName = "Card"; //类名
@@ -20,7 +27,7 @@ public class Main {
 
     static String templateDir = "\\src\\main\\webapp\\template\\";
     static String sourcePath = System.getProperty("user.dir")+templateDir;
-    static String resultDir = "\\result\\";
+    static String resultDir = "\\result";
     static String targetPath = System.getProperty("user.dir")
             + resultDir + "\\"
             + packageName.replace(".", "\\");

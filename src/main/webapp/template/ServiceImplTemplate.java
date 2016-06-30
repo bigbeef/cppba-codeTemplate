@@ -15,6 +15,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * 开发者
+ * nickName:大黄蜂
+ * email:245655812@qq.com
+ * github:https://github.com/bigbeef
+ * velocity模板生成 cppba-codeTemplate
+ */
 @Service
 @Transactional
 public class $!{domainName}ServiceImpl implements $!{domainName}Service{
