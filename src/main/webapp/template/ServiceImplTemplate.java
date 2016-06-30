@@ -1,11 +1,12 @@
 #set ($domain = $!domainName.substring(0,1).toLowerCase()+$!domainName.substring(1))
 package $!{packageName}.service.impl;
 
+import $!{packageName}.core.bean.PageEntity;
 import $!{packageName}.dao.$!{domainName}Dao;
 import $!{packageName}.dto.$!{domainName}Dto;
+import $!{packageName}.dto.BaseDto;
 import $!{packageName}.entity.$!{domainName};
 import $!{packageName}.service.$!{domainName}Service;
-import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -35,7 +36,7 @@ public class $!{domainName}ServiceImpl implements $!{domainName}Service{
 
 	@Override
 	public void delete($!{domainName} $!{domain}) {
-		$!{domainName}Dao.delete($!{domain});
+		$!{domain}Dao.delete($!{domain});
 	}
 
 	@Override
@@ -49,16 +50,21 @@ public class $!{domainName}ServiceImpl implements $!{domainName}Service{
 	}
 
 	@Override
-	public List<$!{domainName}> query(BaseDto baseDto) {
+	public PageEntity<$!{domainName}> query(BaseDto baseDto) {
 		String hql = " select distinct $!{domain} from $!{domainName} $!{domain} where 1=1 ";
 		Map params = new HashMap<String,Object>();
 
 		$!{domainName}Dto $!{domain}Dto = ($!{domainName}Dto)baseDto;
 		$!{domainName} $!{domain} = $!{domain}Dto.get$!{domainName}();
-		Integer page = $!{domain}Dto.getPage();
-		Integer pageSize = $!{domain}Dto.getPageSize();
+		int page = $!{domain}Dto.getPage();
+		int pageSize = $!{domain}Dto.getPageSize();
 
-		return $!{domain}Dao.query(hql,params,0,0);
+		List list = $!{domain}Dao.query(hql,params,page,pageSize);
+		long count = $!{domain}Dao.count(hql,params);
+		PageEntity<$!{domainName}> pe = new PageEntity<$!{domainName}>();
+		pe.setCount(count);
+		pe.setList(list);
+		return pe;
 	}
 }
 

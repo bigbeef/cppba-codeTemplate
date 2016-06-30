@@ -22,7 +22,7 @@ import java.util.Properties;
 
 public class Main {
 
-    static String domainName = "Card"; //类名
+    static String domainName = "Articles"; //类名
     static String packageName = "com.cppba";//类包
 
     static String templateDir = "\\src\\main\\webapp\\template\\";
@@ -35,7 +35,7 @@ public class Main {
     public static void main(String []args) throws Exception{
 
         Map<String,Object> map = new HashMap();
-        map.put("DaoTemplate.java","dao/" + domainName + "DAO.java");
+        map.put("DaoTemplate.java","dao/" + domainName + "Dao.java");
         map.put("ServiceTemplate.java","service/" + domainName + "Service.java");
         map.put("ServiceImplTemplate.java","service/impl/" + domainName + "ServiceImpl.java");
         map.put("DtoTemplate.java","dto/" + domainName + "Dto.java");

@@ -1,6 +1,6 @@
 ﻿#set ($domain = $!domainName.substring(0,1).toLowerCase()+$!domainName.substring(1))package $!{packageName}.service;
 
-import $!{packageName}.bean.pagination.PageEntity;
+import $!{packageName}.core.bean.PageEntity;
 import $!{packageName}.dto.BaseDto;
 import $!{packageName}.entity.${domainName};
 

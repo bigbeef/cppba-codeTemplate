@@ -1,6 +1,5 @@
-#set ($domain = $!domainName.substring(0,1).toLowerCase()+$!domainName.substring(1))package $!{packageName}.dao;
-
-package $!{packageName}.dto;
+#set ($domain = $!domainName.substring(0,1).toLowerCase()+$!domainName.substring(1))
+package $!{packageName}.dao;
 
 import $!{packageName}.entity.$!{domainName};
 
