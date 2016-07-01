@@ -1,4 +1,5 @@
-﻿#set ($domain = $!domainName.substring(0,1).toLowerCase()+$!domainName.substring(1))package $!{packageName}.service;
+#set ($domain = $!domainName.substring(0,1).toLowerCase()+$!domainName.substring(1))
+package $!{packageName}.service;
 
 import $!{packageName}.core.bean.PageEntity;
 import $!{packageName}.dto.BaseDto;
