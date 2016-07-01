@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
  * velocity模板生成 cppba-codeTemplate
  */
 @Repository
-public class $!{domainName}DAO extends BaseDao{
+public class $!{domainName}Dao extends BaseDao{
 
 }
