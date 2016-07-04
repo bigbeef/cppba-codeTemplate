@@ -27,7 +27,7 @@ public class Main {
 
     static String templateDir = "\\src\\main\\webapp\\template\\";
     static String sourcePath = System.getProperty("user.dir")+templateDir;
-    static String resultDir = "\\result";
+    static String resultDir = "\\out";
     static String targetPath = System.getProperty("user.dir")
             + resultDir + "\\"
             + packageName.replace(".", "\\");
