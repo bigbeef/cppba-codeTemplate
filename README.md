@@ -1,6 +1,4 @@
-# velocity模板生成代码教程
-
-##从此拒绝写重复代码
+# velocity模板生成代码（从此拒绝写重复代码）
 
 利用velocity模板生成自定义类的Dao、Service、ServiceImpl、Dto
 
